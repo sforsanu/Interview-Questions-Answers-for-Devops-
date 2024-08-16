@@ -1,0 +1,31 @@
+Brij Kishore Pandey
+Docker VS  Kubernetes
+About
+Docker is a container runtime
+Kubernetes is a platform for running and managing containers
+Primary Function
+A platform for containerizing applications.
+An orchestration tool for managing containers.
+Scaling
+Basic scaling with Docker Swarm. Manual scaling often required.
+Automatic scaling based on application demand.
+Networking
+All containers on a single network by default.
+Provides complex network setup and supports network policies.
+Storage
+Supports volumes but less flexible.
+Supports a wide range of storage solutions.
+Fault Tolerance
+Provides restart policies, but less robust.
+Replaces failed containers automatically.
+User Interface
+Has a user-friendly GUI, Docker Dashboard.
+No default GUI but can integrate with third-party tools.
+Use Case
+Best for single containers and smaller deployments.
+Designed for managing large clusters in production.
+Portability
+Ensures app behaves the same way in every environment.
+Ensures efficient running of deployed applications in any environment.
+NOTE
+Docker and Kubernetes often work together, with Docker : providing the containers and Kubernetes managing them
