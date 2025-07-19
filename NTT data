@@ -1,0 +1,9 @@
+What is terraform datablock ?
+If you are creating ec2, s3, rds, vpc, Which services will create first, second... and why ?
+if someone changed something in your aws infrastucture which was created by Terraform then how will you detect it and add it to the terraform state file and main.tf file ?
+What is the diiference between count and for each in terraform ?
+How can you create multiple ec2 instances with different name ?
+===================================================Monitoring=======================================================
+If your container container or pod in crashloopbackoff status how will you debug it ? How can you monitor the logs of this container using monitoring tool ?
+Explain your CICD project ?
+What is you day to day task in you organisation ?
