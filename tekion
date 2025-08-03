@@ -1,0 +1,4 @@
+I pulled one docker image for the first time and it took 10 sec then i deleted the docker image then i pulled it again i noticed that it took less than 10 second. Now tell me why the second image took less time compare to first image ?
+What is crassloopbackoff error ? Why will you debug it ?
+How will you debug a pod pending status ?
+When pod deployments are there then why we need deployments ?
