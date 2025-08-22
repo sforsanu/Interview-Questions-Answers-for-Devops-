@@ -1,0 +1,39 @@
+In Dockerfiles, ADD, COPY, RUN, and CMD are instructions used to define how a Docker image is built and what happens when a container starts. 
+1. ADD and COPY: 
+Both ADD and COPY are used to transfer files from the build context (the local directory where the Dockerfile resides) into the Docker image. 
+
+• COPY: This instruction is primarily for copying local files and directories from the build context to a specified path within the image. It is generally preferred for its simplicity and clarity. 
+	• Example: 
+
+        COPY ./app /usr/src/app
+
+This copies the contents of the local ./app directory into /usr/src/app inside the image. 
+
+• ADD: This instruction offers additional functionalities beyond simple copying. It can: 
+	• Copy local files and directories. 
+	• Fetch files from a remote URL and place them in the image. 
+	• Automatically extract compressed archives (e.g., .tar.gz, .zip) from the local build context into the image. 
+	• Example (extracting a tar file): 
+
+        ADD app.tar.gz /usr/src/app
+
+This extracts the contents of app.tar.gz into /usr/src/app. Example (fetching from URL). 
+        ADD https://example.com/somefile.txt /tmp/
+
+This downloads somefile.txt from the URL and places it in /tmp/. 
+2. RUN: 
+The RUN instruction executes commands during the image build process. Each RUN instruction creates a new layer in the image. It's used for tasks like installing software, creating directories, or compiling code. example. 
+    RUN apt-get update && apt-get install -y nginx
+
+This updates package lists and installs Nginx during the image build. 
+3. CMD: 
+The CMD instruction defines the default command that will be executed when a container starts from the image. If a command is provided when running docker run, it overrides the CMD instruction. Example (exec form). 
+    CMD ["nginx", "-g", "daemon off;"]
+
+This starts the Nginx server in the foreground when a container is launched. Example (shell form). 
+    CMD echo "Hello from Docker!"
+
+This prints "Hello from Docker!" when the container starts. 
+
+AI responses may include mistakes.
+
